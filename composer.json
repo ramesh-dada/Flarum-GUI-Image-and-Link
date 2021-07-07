@@ -1,0 +1,34 @@
+{
+    "name": "ramesh-dada/flarum-gui-image-and-link",
+    "description": "Adds a simple pop up in composer for image and link",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "proprietary",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "RameshDada Premium",
+            "homepage": "https://discuss.flarum.org/u/1Dot",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ramesh-dada/Flarum-GUI-Image-and-Link/issues",
+        "source": "https://github.com/ramesh-dada/Flarum-GUI-Image-and-Link"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "GUI Popup for Image and Link",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-edit",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        }
+    }
+}
