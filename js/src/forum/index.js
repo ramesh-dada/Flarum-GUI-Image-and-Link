@@ -2,53 +2,55 @@ import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
 import TextEditor from 'flarum/common/components/TextEditor';
 
-app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
+app.initializers.add('ramesh-dada/flarum-gui-image-and-link', () => {
     extend(TextEditor.prototype, 'toolbarItems', function (items) {
         items.add(
             'ramesh-dada-premium-imagegui',
+            
             m(
-                'button',
+                'Tooltip',
+                {
+                text: app.translator.trans('ramesh.imageGUI'),
+                },
+                [
+                m('button',
                 {
                     type: 'buton',
                     class: 'Button Button--icon Button--link hasIcon GuiImage',
-                    title: app.translator.trans('rameshimageGUI'),
-                    onclick: 'imageGUI()',
-                },
-                [
-                    
-                    m('i', { class: 'fas fa-image' }),
+                    title: app.translator.trans('ramesh.imageGUI'),
+                    onclick: 'rameshimageGUI()'
+                }),
                 ],
-                [
-                    
-                    m('span', { class: 'Button-label' }, app.translator.trans('rameshimageGUI')),
-                ]
+                [ m('i', { class: 'fas fa-image' }),],
+                [ m('span', { class: 'Button-label' }, app.translator.trans('ramesh.imageGUI')), ]
             ),
 
-            10
+            4
         );
     });
+
     extend(TextEditor.prototype, 'toolbarItems', function (items) {
         items.add(
             'ramesh-dada-premium-linkgui',
             m(
-                'button',
+                'Tooltip',
                 {
-                    type: 'buton',
-                    class: 'Button Button--icon Button--link hasIcon GuiLink',
-                    title: app.translator.trans('rameshlinkGUI'),
-                    onclick: "linkGUI()",
+                text: app.translator.trans('ramesh.linkGUI'),
                 },
                 [
-                  
-                  m('i', { class: 'fas fa-image' }),
-              ],
-              [
-                  
-                  m('span', { class: 'Button-label' }, app.translator.trans('rameshlinkGUI')),
-              ]
+                m('button',
+                {
+                    type: 'buton',
+                    class: 'Button Button--icon Button--link hasIcon GuiImage',
+                    title: app.translator.trans('ramesh.linkGUI'),
+                    onclick: 'rameshlinkGUI()'
+                }),
+                ],
+                [ m('i', { class: 'fas fa-link' }),],
+                [ m('span', { class: 'Button-label' }, app.translator.trans('ramesh.linkGUI')), ]
             ),
             
-            11
+            5
         );
     });
 });

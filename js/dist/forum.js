@@ -119,30 +119,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('therealsujitk/flarum-ext-gifs', function () {
+flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('ramesh-dada/flarum-gui-image-and-link', function () {
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'toolbarItems', function (items) {
-    items.add('ramesh-dada-premium-imagegui', m('button', {
+    items.add('ramesh-dada-premium-imagegui', m('Tooltip', {
+      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI')
+    }, [m('button', {
       type: 'buton',
       "class": 'Button Button--icon Button--link hasIcon GuiImage',
-      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshimageGUI'),
-      onclick: 'imageGUI()'
-    }, [m('i', {
+      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI'),
+      onclick: 'rameshimageGUI()'
+    })], [m('i', {
       "class": 'fas fa-image'
     })], [m('span', {
       "class": 'Button-label'
-    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshimageGUI'))]), 10);
+    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI'))]), 4);
   });
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'toolbarItems', function (items) {
-    items.add('ramesh-dada-premium-linkgui', m('button', {
+    items.add('ramesh-dada-premium-linkgui', m('Tooltip', {
+      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI')
+    }, [m('button', {
       type: 'buton',
-      "class": 'Button Button--icon Button--link hasIcon GuiLink',
-      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshlinkGUI'),
-      onclick: "linkGUI()"
-    }, [m('i', {
-      "class": 'fas fa-image'
+      "class": 'Button Button--icon Button--link hasIcon GuiImage',
+      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI'),
+      onclick: 'rameshlinkGUI()'
+    })], [m('i', {
+      "class": 'fas fa-link'
     })], [m('span', {
       "class": 'Button-label'
-    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshlinkGUI'))]), 11);
+    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI'))]), 5);
   });
 });
 

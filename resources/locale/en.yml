@@ -1,5 +1,4 @@
-    forum:
-        textEditor:
+ramesh:
             # Text Editor Buttons
-            rameshimageGUI:         Add an Image
-            rameshlinkGUI:        Add a Link
+            imageGUI:         Add an Image
+            linkGUI:        Add a Link

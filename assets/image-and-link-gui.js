@@ -17,7 +17,7 @@ function rameshimageGUI(){
         })
       
         if (formValues) {
-            var text = document.querySelector('.FormControl .Composer-flexible .TextEditor-editor');
+            var text = document.querySelector('textarea.FormControl');
             var imagetitle = document.getElementById('swal-input1').value
             var imageurl = document.getElementById('swal-input2').value
             text.value += `![${imagetitle}](${imageurl})`;
@@ -45,7 +45,7 @@ function rameshlinkGUI(){
         })
       
         if (formValues) {
-            var text = document.querySelector('.FormControl .Composer-flexible .TextEditor-editor');
+            var text = document.querySelector('textarea.FormControl');
             var linktitle = document.getElementById('swal-input1').value
             var linkurl = document.getElementById('swal-input2').value
             text.value += `[${linktitle}](${linkurl})`;
