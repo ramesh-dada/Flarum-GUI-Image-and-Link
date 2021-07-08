@@ -121,20 +121,23 @@ __webpack_require__.r(__webpack_exports__);
 
 flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('therealsujitk/flarum-ext-gifs', function () {
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'toolbarItems', function (items) {
-    items.add('imagegui', m(Tooltip, {
-      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshimageGUI')
-    }, m(Button, {
-      icon: "fas fa-image",
-      className: "Button Button--icon Button--link GUIimage",
-      onclick: "imageGUI()"
-    })));
-    items.add('linkgui', m(Tooltip, {
-      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshlinkGUI')
-    }, m(Button, {
-      icon: "fas fa-link",
-      className: "Button Button--icon Button--link GUIlink",
-      onclick: "linkGUI()"
-    })));
+    items.add('ramesh-dada-premium-imagegui', m('button', {
+      type: 'buton',
+      "class": 'Button Button--icon Button--link hasIcon GuiImage',
+      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshimageGUI'),
+      onclick: 'imageGUI()',
+      icon: 'fas fa-image'
+    }, [m('span', {
+      "class": 'Button-label'
+    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshimageGUI'))]), 'ramesh-dada-premium-linkgui', m('button', {
+      type: 'buton',
+      "class": 'Button Button--icon Button--link hasIcon GuiLink',
+      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshlinkGUI'),
+      onclick: 'linkGUI()',
+      icon: 'fas fa-link'
+    }, [m('span', {
+      "class": 'Button-label'
+    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('rameshlinkGUI'))]), 10);
   });
 });
 
