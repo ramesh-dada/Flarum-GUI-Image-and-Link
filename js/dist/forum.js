@@ -116,30 +116,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_common_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/common/components/TextEditor */ "flarum/common/components/TextEditor");
 /* harmony import */ var flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var flarum_common_components_Tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/common/components/Tooltip */ "flarum/common/components/Tooltip");
+/* harmony import */ var flarum_common_components_Tooltip__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_common_components_Tooltip__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('ramesh-dada/flarum-gui-image-and-link', function () {
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'toolbarItems', function (items) {
-    items.add('ramesh-dada-premium-imagegui', m('Tooltip', {
-      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI')
-    }, [m('button', {
-      type: 'buton',
-      "class": 'Button Button--icon Button--link hasIcon GuiImage',
-      title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI'),
-      onclick: 'rameshimageGUI()'
-    })], [m('i', {
-      "class": 'fas fa-image'
-    })], [m('span', {
-      "class": 'Button-label'
-    }, flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.imageGUI'))]), 4);
+    items.add('ramesh-dada-premium-imagegui', m(flarum_common_components_Tooltip__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI')
+    }, Button.component({
+      className: 'Button Button--icon Button--link hasIcon GuiImage',
+      onclick: 'rameshimageGUI()',
+      icon: 'fas fa-image'
+    })));
   });
   Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'toolbarItems', function (items) {
     items.add('ramesh-dada-premium-linkgui', m('Tooltip', {
       text: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI')
     }, [m('button', {
       type: 'buton',
-      "class": 'Button Button--icon Button--link hasIcon GuiImage',
+      "class": 'Button Button--icon Button--link hasIcon GuiLink',
       title: flarum_common_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans('ramesh.linkGUI'),
       onclick: 'rameshlinkGUI()'
     })], [m('i', {
@@ -171,6 +169,17 @@ module.exports = flarum.core.compat['common/app'];
 /***/ (function(module, exports) {
 
 module.exports = flarum.core.compat['common/components/TextEditor'];
+
+/***/ }),
+
+/***/ "flarum/common/components/Tooltip":
+/*!******************************************************************!*\
+  !*** external "flarum.core.compat['common/components/Tooltip']" ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['common/components/Tooltip'];
 
 /***/ }),
 
