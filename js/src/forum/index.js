@@ -1,28 +1,21 @@
 import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
-import addTextEditorButton from './addTextEditorButton';
+import TextEditor from 'flarum/common/components/TextEditor';
 
-app.initializers.add('ramesh-dada-premium-extender', () => {
-  let whenLoaded = {};
-  let hasLoaded = false;
-  let isLoading = false;
+app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
+    extend(TextEditor.prototype, 'toolbarItems', function (items) {
+      items.add(
+        'imagegui',
+        <Tooltip text= {app.translator.trans('rameshimageGUI')}>
+          <Button icon="fas fa-image" className="Button Button--icon Button--link GUIimage" onclick="imageGUI()" />
+        </Tooltip>
+      );
 
-  const load = () => {
-    isLoading = true;
-
-    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.0.18/sweetalert2.all.min.js', () => {
-      $.getScript('/assets/extensions/ramesh-dada-flarum-gui-image-and-link/image-and-link-gui.js', () => {
-        for (const id in whenLoaded) {
-          whenLoaded[id]();
-        }
-
-        whenLoaded = {};
-        isLoading = false;
-        hasLoaded = true;
-      });
+      items.add(
+        'linkgui',
+        <Tooltip text= {app.translator.trans('rameshlinkGUI')}>
+          <Button icon="fas fa-link" className="Button Button--icon Button--link GUIlink" onclick="linkGUI()" />
+        </Tooltip>
+      );
     });
-  };
-
-  // Add Text Editor button
-  addTextEditorButton();
 });
