@@ -16,6 +16,11 @@ app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
                     icon: 'fas fa-image'
                 },
                 [
+                    
+                    m('i', { class: 'fas fa-image' }, app.translator.trans('rameshimageGUI')),
+                ],
+                [
+                    
                     m('span', { class: 'Button-label' }, app.translator.trans('rameshimageGUI')),
                 ]
             ),
@@ -27,12 +32,16 @@ app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
                       type: 'buton',
                       class: 'Button Button--icon Button--link hasIcon GuiLink',
                       title: app.translator.trans('rameshlinkGUI'),
-                      onclick: 'linkGUI()',
-                      icon: 'fas fa-link'
+                      onclick: "linkGUI()",
                   },
                   [
-                      m('span', { class: 'Button-label' }, app.translator.trans('rameshlinkGUI')),
-                  ]
+                    
+                    m('i', { class: 'fas fa-image' }, app.translator.trans('rameshlinkGUI')),
+                ],
+                [
+                    
+                    m('span', { class: 'Button-label' }, app.translator.trans('rameshlinkGUI')),
+                ]
               ),
             10
         );
