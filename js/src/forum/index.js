@@ -13,11 +13,10 @@ app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
                     class: 'Button Button--icon Button--link hasIcon GuiImage',
                     title: app.translator.trans('rameshimageGUI'),
                     onclick: 'imageGUI()',
-                    icon: 'fas fa-image'
                 },
                 [
                     
-                    m('i', { class: 'fas fa-image' }, app.translator.trans('rameshimageGUI')),
+                    m('i', { class: 'fas fa-image' }),
                 ],
                 [
                     
@@ -25,25 +24,31 @@ app.initializers.add('therealsujitk/flarum-ext-gifs', () => {
                 ]
             ),
 
-              'ramesh-dada-premium-linkgui',
-              m(
-                  'button',
-                  {
-                      type: 'buton',
-                      class: 'Button Button--icon Button--link hasIcon GuiLink',
-                      title: app.translator.trans('rameshlinkGUI'),
-                      onclick: "linkGUI()",
-                  },
-                  [
-                    
-                    m('i', { class: 'fas fa-image' }, app.translator.trans('rameshlinkGUI')),
-                ],
-                [
-                    
-                    m('span', { class: 'Button-label' }, app.translator.trans('rameshlinkGUI')),
-                ]
-              ),
             10
+        );
+    });
+    extend(TextEditor.prototype, 'toolbarItems', function (items) {
+        items.add(
+            'ramesh-dada-premium-linkgui',
+            m(
+                'button',
+                {
+                    type: 'buton',
+                    class: 'Button Button--icon Button--link hasIcon GuiLink',
+                    title: app.translator.trans('rameshlinkGUI'),
+                    onclick: "linkGUI()",
+                },
+                [
+                  
+                  m('i', { class: 'fas fa-image' }),
+              ],
+              [
+                  
+                  m('span', { class: 'Button-label' }, app.translator.trans('rameshlinkGUI')),
+              ]
+            ),
+            
+            11
         );
     });
 });
