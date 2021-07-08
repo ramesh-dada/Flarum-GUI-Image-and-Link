@@ -18,7 +18,7 @@ composer remove ramesh-dada/flarum-gui-image-and-link
 ```
 
 ### Links
-- [Discuss](https://discuss.flarum.org/d/27975)
+- [Discuss](https://discuss.flarum.org/d/28051)
 - [Extiverse](https://extiverse.com/extension/ramesh-dada/flarum-gui-image-and-link)
 - [Github](https://github.com/ramesh-dada/Flarum-GUI-Image-and-Link)
 - [Packagist](https://packagist.org/packages/ramesh-dada/flarum-gui-image-and-link)
